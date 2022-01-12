@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title> Uji Coba Form </title>
+    </head>
+    <body>
+        <style>
+            @import url('http://fonts.cdnfonts.com/css/valorant');
+           body{
+               background-color: rgb(2, 17, 27);
+           }
+           table{
+               color:rgba(241, 219, 18, 0.959);
+               
+               background-color: rgb(111, 0, 255);
+               font-family: 'VALORANT', sans-serif;
+               text-align: center;                            
+           }
+       </style>
+        <script language="JavaScript" type="text/javascript">
+
+        function hitung(){
+        
+        var myForm = document.calcu;
+        var angka1=eval(myForm.angka1.value);
+        var angka2=eval(myForm.angka2.value);
+        var pil= myForm.oprator.value;
+        if (pil == "tambah") {
+        var z = angka1 + angka2;
+         }else if (pil == "kurang") {
+        var z = angka1 - angka2;
+         } else if (pil == "kali") {
+        var z = angka1 * angka2;
+         } else if (pil == "bagi") {
+        var z = angka1 / angka2;
+         }
+         myForm.hasil.value = z;
+         myForm.x.value = "";
+         myForm.y.value = "";
+        }
+        function resetForm(){
+        document.form1.reset();
+        }
+        
+        
+        </script>
+        <form name="calcu" action="#">
+            <table align="center">
+                <tr>
+                    <td>masukan Angka 1</td>
+                    <td>:</td>
+                    <td><input type="text" name="angka1"></td>
+                </tr>
+                <tr>
+                    <td>masukan Angka 2</td>
+                    <td>:</td>
+                    <td><input type="text" name="angka2"></td>
+                </tr>
+                <tr>
+                    <td> oprator </td>
+                    <td>:</td>
+                    <td>
+                        <select name="oprator">
+                            <option value="tambah">+</option>
+                            <option value="kurang">-</option>
+                            <option value="bagi">:</option>
+                            <option value="kali">x</option>
+                        </select>   
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="button" value="SUBMIT" onClick="hitung()" style="width: 100%;" /></td>
+                </tr>
+                <tr>
+                    <td>hasil</td>
+                    <td>:</td>
+                    <td><input type="text" name="hasil"  /></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
